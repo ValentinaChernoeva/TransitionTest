@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  UsersViewController.h
 //  TransitionTest
 //
 //  Created by Valentina Chernoeva on 25.03.16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface UsersViewController : UIViewController
 
 @end
-
