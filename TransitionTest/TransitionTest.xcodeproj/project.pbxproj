@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		A76ADD5F1CA52EAD000BC2D7 /* UsersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A76ADD5E1CA52EAD000BC2D7 /* UsersViewController.m */; };
 		A76ADD631CA53018000BC2D7 /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A76ADD621CA53018000BC2D7 /* ArrayDataSource.m */; };
+		A76ADD671CA5342E000BC2D7 /* UserInfoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A76ADD661CA5342E000BC2D7 /* UserInfoViewCell.m */; };
+		A76ADD6B1CA5357F000BC2D7 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A76ADD6A1CA5357F000BC2D7 /* User.m */; };
+		A76ADD731CA5371A000BC2D7 /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = A76ADD721CA5371A000BC2D7 /* UIView+Addition.m */; };
 		A79567611CA52B8E00A79EE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A79567601CA52B8E00A79EE6 /* main.m */; };
 		A79567641CA52B8E00A79EE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A79567631CA52B8E00A79EE6 /* AppDelegate.m */; };
 		A795676A1CA52B8E00A79EE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A79567681CA52B8E00A79EE6 /* Main.storyboard */; };
@@ -41,6 +44,12 @@
 		A76ADD611CA53018000BC2D7 /* ArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayDataSource.h; sourceTree = "<group>"; };
 		A76ADD621CA53018000BC2D7 /* ArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayDataSource.m; sourceTree = "<group>"; };
 		A76ADD641CA531DE000BC2D7 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		A76ADD651CA5342E000BC2D7 /* UserInfoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoViewCell.h; sourceTree = "<group>"; };
+		A76ADD661CA5342E000BC2D7 /* UserInfoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewCell.m; sourceTree = "<group>"; };
+		A76ADD691CA5357F000BC2D7 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		A76ADD6A1CA5357F000BC2D7 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		A76ADD711CA5371A000BC2D7 /* UIView+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Addition.h"; sourceTree = "<group>"; };
+		A76ADD721CA5371A000BC2D7 /* UIView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
 		A795675C1CA52B8E00A79EE6 /* TransitionTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitionTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A79567601CA52B8E00A79EE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A79567621CA52B8E00A79EE6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -91,6 +100,33 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
+		A76ADD681CA53433000BC2D7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A76ADD651CA5342E000BC2D7 /* UserInfoViewCell.h */,
+				A76ADD661CA5342E000BC2D7 /* UserInfoViewCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		A76ADD6C1CA53582000BC2D7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A76ADD691CA5357F000BC2D7 /* User.h */,
+				A76ADD6A1CA5357F000BC2D7 /* User.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A76ADD701CA536C4000BC2D7 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A76ADD711CA5371A000BC2D7 /* UIView+Addition.h */,
+				A76ADD721CA5371A000BC2D7 /* UIView+Addition.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		A79567531CA52B8E00A79EE6 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +155,9 @@
 				A76ADD641CA531DE000BC2D7 /* Utils.h */,
 				A76ADD611CA53018000BC2D7 /* ArrayDataSource.h */,
 				A76ADD621CA53018000BC2D7 /* ArrayDataSource.m */,
+				A76ADD701CA536C4000BC2D7 /* Categories */,
+				A76ADD6C1CA53582000BC2D7 /* Models */,
+				A76ADD681CA53433000BC2D7 /* Cells */,
 				A76ADD601CA52EB2000BC2D7 /* ViewControllers */,
 				A79567681CA52B8E00A79EE6 /* Main.storyboard */,
 				A795676B1CA52B8E00A79EE6 /* Assets.xcassets */,
@@ -287,7 +326,10 @@
 			files = (
 				A76ADD5F1CA52EAD000BC2D7 /* UsersViewController.m in Sources */,
 				A79567641CA52B8E00A79EE6 /* AppDelegate.m in Sources */,
+				A76ADD6B1CA5357F000BC2D7 /* User.m in Sources */,
 				A76ADD631CA53018000BC2D7 /* ArrayDataSource.m in Sources */,
+				A76ADD731CA5371A000BC2D7 /* UIView+Addition.m in Sources */,
+				A76ADD671CA5342E000BC2D7 /* UserInfoViewCell.m in Sources */,
 				A79567611CA52B8E00A79EE6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
