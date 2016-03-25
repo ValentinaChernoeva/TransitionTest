@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ8-tH-InD">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ8-tH-InD">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -90,24 +90,100 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="15.5" y="533.5"/>
+            <point key="canvasLocation" x="24.5" y="533.5"/>
+        </scene>
+        <!--User Profile View Controller-->
+        <scene sceneID="RIB-fN-yst">
+            <objects>
+                <viewController storyboardIdentifier="UserProfileViewController" id="Mpq-g3-tsr" customClass="UserProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oxh-qn-kxL"/>
+                        <viewControllerLayoutGuide type="bottom" id="mYh-1c-snU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EfC-58-q3t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfq-dw-cU2">
+                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2dC-7X-JjY">
+                                        <rect key="frame" x="16" y="24" width="72" height="72"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="72" id="3UF-4C-fSR"/>
+                                            <constraint firstAttribute="height" constant="72" id="BYn-Gb-5fu"/>
+                                            <constraint firstAttribute="width" secondItem="2dC-7X-JjY" secondAttribute="height" multiplier="1:1" id="FXy-6s-LIs"/>
+                                            <constraint firstAttribute="width" secondItem="2dC-7X-JjY" secondAttribute="height" multiplier="1:1" id="XKt-5E-HHD"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jv-No-8Xs">
+                                        <rect key="frame" x="96" y="24" width="271" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfC-pU-Hfm">
+                                        <rect key="frame" x="96" y="53" width="271" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.46481805100000001" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="kfC-pU-Hfm" firstAttribute="top" secondItem="4jv-No-8Xs" secondAttribute="bottom" constant="8" id="2jb-1I-9go"/>
+                                    <constraint firstItem="4jv-No-8Xs" firstAttribute="top" secondItem="2dC-7X-JjY" secondAttribute="top" id="32E-bl-3pj"/>
+                                    <constraint firstItem="kfC-pU-Hfm" firstAttribute="leading" secondItem="4jv-No-8Xs" secondAttribute="leading" id="3rj-k3-eUP"/>
+                                    <constraint firstItem="2dC-7X-JjY" firstAttribute="leading" secondItem="xfq-dw-cU2" secondAttribute="leading" constant="16" id="5z6-VT-1pR"/>
+                                    <constraint firstItem="4jv-No-8Xs" firstAttribute="leading" secondItem="2dC-7X-JjY" secondAttribute="trailing" constant="8" id="CrV-U1-kJ1"/>
+                                    <constraint firstAttribute="height" constant="120" id="Fvr-yF-fLp"/>
+                                    <constraint firstAttribute="trailing" secondItem="4jv-No-8Xs" secondAttribute="trailing" constant="8" id="mbZ-Ly-pGi"/>
+                                    <constraint firstItem="2dC-7X-JjY" firstAttribute="centerY" secondItem="xfq-dw-cU2" secondAttribute="centerY" id="o6Q-en-KDe"/>
+                                    <constraint firstItem="kfC-pU-Hfm" firstAttribute="trailing" secondItem="4jv-No-8Xs" secondAttribute="trailing" id="tPF-Uy-qXG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xfq-dw-cU2" secondAttribute="trailing" id="4dr-Vc-TeG"/>
+                            <constraint firstItem="xfq-dw-cU2" firstAttribute="leading" secondItem="EfC-58-q3t" secondAttribute="leading" id="4eN-Yi-9IZ"/>
+                            <constraint firstItem="xfq-dw-cU2" firstAttribute="top" secondItem="oxh-qn-kxL" secondAttribute="bottom" constant="8" id="73X-Xr-DxU"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="kfC-pU-Hfm" id="x80-bS-yBh"/>
+                        <outlet property="headerView" destination="xfq-dw-cU2" id="clU-AE-YY0"/>
+                        <outlet property="nameLabel" destination="4jv-No-8Xs" id="mIc-Ql-yCf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HF1-fs-iKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="513.5" y="533.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bNa-2M-RqQ">
             <objects>
                 <navigationController id="EW6-Zu-9om" sceneMemberID="viewController">
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KS1-xF-Hdg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
+                        <outlet property="delegate" destination="VUo-Y9-izA" id="TIC-t2-jEb"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="FVm-N4-QYn"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8SU-gl-q1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="VUo-Y9-izA" customClass="NavigationControllerDelegate">
+                    <connections>
+                        <outlet property="navigationController" destination="EW6-Zu-9om" id="UYk-5G-cSw"/>
+                    </connections>
+                </customObject>
             </objects>
-            <point key="canvasLocation" x="-443" y="382"/>
+            <point key="canvasLocation" x="-462.5" y="533.5"/>
         </scene>
     </scenes>
 </document>
