@@ -18,7 +18,7 @@
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
-    
+
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     
@@ -27,7 +27,7 @@
     
     UIView *fromView = nil;
     UIView *toView = nil;
-  
+
     if (self.transitioningType == TransitioningFromUserToProfile) {
         fromView = ((UsersViewController *)fromViewController).selectedCell;
         toView = ((ProfileViewController *)toViewController).headerView;

@@ -78,7 +78,9 @@
                                                            toViewController:(UIViewController *)toVC {
     Animator *animator = [[Animator alloc] init];
     if (operation == UINavigationControllerOperationPush) {
-         animator.transitioningType = TransitioningFromUserToProfile;
+        animator.transitioningType = TransitioningFromUserToProfile;
+    } else if ([fromVC isKindOfClass:[self class]]){
+        return nil;
     } else {
         animator.transitioningType = TransitioningFromProfileToUser;
     }
