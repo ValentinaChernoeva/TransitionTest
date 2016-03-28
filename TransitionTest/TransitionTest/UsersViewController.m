@@ -10,6 +10,7 @@
 #import "Animator.h"
 #import "ArrayDataSource.h"
 #import "UIView+Addition.h"
+#import "UIViewController+Storyboard.h"
 #import "User.h"
 #import "UserInfoViewCell.h"
 #import "ProfileViewController.h"
@@ -61,7 +62,7 @@
 #pragma mark UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    ProfileViewController *profileVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ProfileViewController"];
+    ProfileViewController *profileVC = [ProfileViewController instantiateFromMainStoryboard];
     profileVC.user = [self.usersArrayDataSource itemAtIndexPath:indexPath];
     self.selectedCell = [tableView cellForRowAtIndexPath:indexPath];
 
