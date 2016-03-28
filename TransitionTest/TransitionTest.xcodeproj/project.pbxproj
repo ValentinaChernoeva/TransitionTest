@@ -19,7 +19,7 @@
 		A795676F1CA52B8E00A79EE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A795676D1CA52B8E00A79EE6 /* LaunchScreen.storyboard */; };
 		A795677A1CA52B8E00A79EE6 /* TransitionTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A79567791CA52B8E00A79EE6 /* TransitionTestTests.m */; };
 		A79567851CA52B8F00A79EE6 /* TransitionTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A79567841CA52B8F00A79EE6 /* TransitionTestUITests.m */; };
-		A7B2DEC31CA53B860004FBDF /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B2DEC21CA53B860004FBDF /* UserProfileViewController.m */; };
+		A7B2DEC31CA53B860004FBDF /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B2DEC21CA53B860004FBDF /* ProfileViewController.m */; };
 		A7B2DEC61CA5401D0004FBDF /* Animator.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B2DEC51CA5401D0004FBDF /* Animator.m */; };
 /* End PBXBuildFile section */
 
@@ -66,8 +66,8 @@
 		A79567801CA52B8F00A79EE6 /* TransitionTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransitionTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A79567841CA52B8F00A79EE6 /* TransitionTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransitionTestUITests.m; sourceTree = "<group>"; };
 		A79567861CA52B8F00A79EE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7B2DEC11CA53B860004FBDF /* UserProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileViewController.h; sourceTree = "<group>"; };
-		A7B2DEC21CA53B860004FBDF /* UserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileViewController.m; sourceTree = "<group>"; };
+		A7B2DEC11CA53B860004FBDF /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		A7B2DEC21CA53B860004FBDF /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		A7B2DEC41CA5401D0004FBDF /* Animator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animator.h; sourceTree = "<group>"; };
 		A7B2DEC51CA5401D0004FBDF /* Animator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,8 +102,8 @@
 			children = (
 				A76ADD5D1CA52EAD000BC2D7 /* UsersViewController.h */,
 				A76ADD5E1CA52EAD000BC2D7 /* UsersViewController.m */,
-				A7B2DEC11CA53B860004FBDF /* UserProfileViewController.h */,
-				A7B2DEC21CA53B860004FBDF /* UserProfileViewController.m */,
+				A7B2DEC11CA53B860004FBDF /* ProfileViewController.h */,
+				A7B2DEC21CA53B860004FBDF /* ProfileViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -348,7 +348,7 @@
 				A76ADD631CA53018000BC2D7 /* ArrayDataSource.m in Sources */,
 				A76ADD731CA5371A000BC2D7 /* UIView+Addition.m in Sources */,
 				A7B2DEC61CA5401D0004FBDF /* Animator.m in Sources */,
-				A7B2DEC31CA53B860004FBDF /* UserProfileViewController.m in Sources */,
+				A7B2DEC31CA53B860004FBDF /* ProfileViewController.m in Sources */,
 				A76ADD671CA5342E000BC2D7 /* UserInfoViewCell.m in Sources */,
 				A79567611CA52B8E00A79EE6 /* main.m in Sources */,
 			);

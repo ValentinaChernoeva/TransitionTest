@@ -10,5 +10,6 @@
 
 @interface UsersViewController : UIViewController
 
+@property (strong, nonatomic) UITableViewCell *selectedCell;
 
 @end

@@ -1,5 +1,5 @@
 //
-//  UserProfileViewController.h
+//  ProfileViewController.h
 //  TransitionTest
 //
 //  Created by Valentina Chernoeva on 25.03.16.
@@ -10,7 +10,7 @@
 
 @class User;
 
-@interface UserProfileViewController : UIViewController
+@interface ProfileViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIView *headerView;
 @property (strong, nonatomic) User *user;

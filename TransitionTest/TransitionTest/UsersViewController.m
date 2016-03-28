@@ -12,7 +12,7 @@
 #import "UIView+Addition.h"
 #import "User.h"
 #import "UserInfoViewCell.h"
-#import "UserProfileViewController.h"
+#import "ProfileViewController.h"
 
 @interface UsersViewController () <UINavigationControllerDelegate>
 
@@ -64,11 +64,9 @@
 #pragma mark UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UserProfileViewController *profileVC = [self.storyboard instantiateViewControllerWithIdentifier:@"UserProfileViewController"];
+    ProfileViewController *profileVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ProfileViewController"];
     profileVC.user = [self.usersArrayDataSource itemAtIndexPath:indexPath];
-    UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
-    self.animator = [[Animator alloc] init];
-    self.animator.selectedCell = (UserInfoViewCell *)selectedCell;
+    self.selectedCell = [tableView cellForRowAtIndexPath:indexPath];
 
     [self.navigationController pushViewController:profileVC animated:YES];
 
@@ -80,9 +78,12 @@
                                             animationControllerForOperation:(UINavigationControllerOperation)operation
                                                          fromViewController:(UIViewController *)fromVC
                                                            toViewController:(UIViewController *)toVC {
+    Animator *animator = [[Animator alloc] init];
     if (operation == UINavigationControllerOperationPush) {
-        return self.animator;
+         animator.transitioningType = TransitioningFromUserToProfile;
+    } else {
+        animator.transitioningType = TransitioningFromProfileToUser;
     }
-    return nil;
+    return animator;
 }
 @end

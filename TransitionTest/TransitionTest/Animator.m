@@ -7,7 +7,8 @@
 //
 
 #import "Animator.h"
-#import "UserProfileViewController.h"
+#import "UsersViewController.h"
+#import "ProfileViewController.h"
 #import "UserInfoViewCell.h"
 
 @implementation Animator
@@ -17,35 +18,45 @@
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
-
-    UserProfileViewController *toViewController = (UserProfileViewController *)[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    
+    UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     
     UIView *containerView = [transitionContext containerView];
     NSTimeInterval duration = [self transitionDuration:transitionContext];
     
-    UserInfoViewCell *cell = self.selectedCell;
-    UIView *cellSnapshot = [cell snapshotViewAfterScreenUpdates:NO];
-    cellSnapshot.frame = [containerView convertRect:cell.frame fromView:cell.superview];
-    cell.hidden = YES;
+    UIView *fromView = nil;
+    UIView *toView = nil;
+  
+    if (self.transitioningType == TransitioningFromUserToProfile) {
+        fromView = ((UsersViewController *)fromViewController).selectedCell;
+        toView = ((ProfileViewController *)toViewController).headerView;
+    } else {
+        fromView = ((ProfileViewController *)fromViewController).headerView;
+        toView = ((UsersViewController *)toViewController).selectedCell;
+    }
+
+    UIView *snapshot = [fromView snapshotViewAfterScreenUpdates:NO];
+    snapshot.frame = [containerView convertRect:fromView.frame fromView:fromView.superview];
+    fromView.hidden = YES;
     
     toViewController.view.frame = [transitionContext finalFrameForViewController:toViewController];
     toViewController.view.alpha = 0.f;
-    toViewController.headerView.hidden = YES;
+    toView.hidden = YES;
     
     [containerView addSubview:toViewController.view];
-    [containerView addSubview:cellSnapshot];
+    [containerView addSubview:snapshot];
     
     [UIView animateWithDuration:duration animations:^{
         toViewController.view.alpha = 1.f;
-        
-        CGRect frame = [containerView convertRect:toViewController.headerView.frame fromView:toViewController.view];
-        CGRect newFrame = cellSnapshot.frame;
+        CGRect frame = [containerView convertRect:toView.frame fromView:toView.superview];
+        CGRect newFrame = snapshot.frame;
         newFrame.origin = frame.origin;
-        cellSnapshot.frame = newFrame;
+        snapshot.frame = newFrame;
     } completion:^(BOOL finished) {
-        toViewController.headerView.hidden = NO;
-        cell.hidden = NO;
-        [cellSnapshot removeFromSuperview];
+        toView.hidden = NO;
+        fromView.hidden = NO;
+        [snapshot removeFromSuperview];
         
         [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
     }];

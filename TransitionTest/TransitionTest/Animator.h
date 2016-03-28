@@ -9,10 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@class UserInfoViewCell;
+typedef NS_ENUM(NSUInteger, TransitioningType) {
+    TransitioningFromUserToProfile,
+    TransitioningFromProfileToUser
+};
 
 @interface Animator : NSObject <UIViewControllerAnimatedTransitioning>
 
-@property (strong, nonatomic) UserInfoViewCell *selectedCell;
+@property (assign, nonatomic) TransitioningType transitioningType;
 
 @end
