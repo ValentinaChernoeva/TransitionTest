@@ -21,7 +21,6 @@
 		A79567851CA52B8F00A79EE6 /* TransitionTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A79567841CA52B8F00A79EE6 /* TransitionTestUITests.m */; };
 		A7B2DEC31CA53B860004FBDF /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B2DEC21CA53B860004FBDF /* UserProfileViewController.m */; };
 		A7B2DEC61CA5401D0004FBDF /* Animator.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B2DEC51CA5401D0004FBDF /* Animator.m */; };
-		A7B2DEC91CA5449B0004FBDF /* NavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B2DEC81CA5449B0004FBDF /* NavigationControllerDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +70,6 @@
 		A7B2DEC21CA53B860004FBDF /* UserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileViewController.m; sourceTree = "<group>"; };
 		A7B2DEC41CA5401D0004FBDF /* Animator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animator.h; sourceTree = "<group>"; };
 		A7B2DEC51CA5401D0004FBDF /* Animator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animator.m; sourceTree = "<group>"; };
-		A7B2DEC71CA5449B0004FBDF /* NavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationControllerDelegate.h; sourceTree = "<group>"; };
-		A7B2DEC81CA5449B0004FBDF /* NavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationControllerDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,8 +163,6 @@
 				A7B2DECA1CA552DD0004FBDF /* Utilits */,
 				A7B2DEC41CA5401D0004FBDF /* Animator.h */,
 				A7B2DEC51CA5401D0004FBDF /* Animator.m */,
-				A7B2DEC71CA5449B0004FBDF /* NavigationControllerDelegate.h */,
-				A7B2DEC81CA5449B0004FBDF /* NavigationControllerDelegate.m */,
 				A76ADD6C1CA53582000BC2D7 /* Models */,
 				A76ADD681CA53433000BC2D7 /* Cells */,
 				A76ADD601CA52EB2000BC2D7 /* ViewControllers */,
@@ -349,7 +344,6 @@
 			files = (
 				A76ADD5F1CA52EAD000BC2D7 /* UsersViewController.m in Sources */,
 				A79567641CA52B8E00A79EE6 /* AppDelegate.m in Sources */,
-				A7B2DEC91CA5449B0004FBDF /* NavigationControllerDelegate.m in Sources */,
 				A76ADD6B1CA5357F000BC2D7 /* User.m in Sources */,
 				A76ADD631CA53018000BC2D7 /* ArrayDataSource.m in Sources */,
 				A76ADD731CA5371A000BC2D7 /* UIView+Addition.m in Sources */,

@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+@class UserInfoViewCell;
+
 @interface Animator : NSObject <UIViewControllerAnimatedTransitioning>
+
+@property (strong, nonatomic) UserInfoViewCell *selectedCell;
 
 @end

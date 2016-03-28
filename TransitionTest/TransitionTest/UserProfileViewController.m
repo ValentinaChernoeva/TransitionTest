@@ -7,6 +7,7 @@
 //
 
 #import "UserProfileViewController.h"
+#import "Animator.h"
 #import "User.h"
 
 @interface UserProfileViewController ()
@@ -20,10 +21,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self fillOfViews];
+    [self configurateView];
 }
 
-- (void)fillOfViews {
+- (void)configurateView {
     self.nameLabel.text = self.user.name;
     self.emailLabel.text = self.user.email;
 }
