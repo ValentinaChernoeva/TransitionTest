@@ -55,13 +55,5 @@
     PERFORM_BLOCK_IF_NOT_NIL(self.configureCellBlock, cell, item);
     return cell;
 }
-#pragma mark UITableViewDelegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    PhotoViewController *photoViewController = [[PhotoViewController alloc] initWithNibName:@"PhotoViewController"
-//                                                                                     bundle:nil];
-//    photoViewController.photo = [self.photosArrayDataSource itemAtIndexPath:indexPath];
-//    [self.navigationController pushViewController:photoViewController animated:YES];
-}
 
 @end

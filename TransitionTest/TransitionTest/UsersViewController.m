@@ -26,7 +26,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
- 
     [self setupTableView];
 }
 
@@ -42,9 +41,7 @@
         cell.emailLabel.text = user.email;
     };
     
-    
-    NSArray *users = [self items];
-    self.usersArrayDataSource = [[ArrayDataSource alloc] initWithItems:users
+    self.usersArrayDataSource = [[ArrayDataSource alloc] initWithItems:[self items]
                                                          cellIdentifier:[UserInfoViewCell reuseIdentifier]
                                                      configureCellBlock:configureCell];
     self.tableView.dataSource = self.usersArrayDataSource;

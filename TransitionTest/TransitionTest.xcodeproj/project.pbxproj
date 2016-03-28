@@ -97,6 +97,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A71C6DE61CA8EC2400CF6DFC /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				A7B2DEC41CA5401D0004FBDF /* Animator.h */,
+				A7B2DEC51CA5401D0004FBDF /* Animator.m */,
+			);
+			name = Animator;
+			sourceTree = "<group>";
+		};
 		A76ADD601CA52EB2000BC2D7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,8 +170,7 @@
 				A79567621CA52B8E00A79EE6 /* AppDelegate.h */,
 				A79567631CA52B8E00A79EE6 /* AppDelegate.m */,
 				A7B2DECA1CA552DD0004FBDF /* Utilits */,
-				A7B2DEC41CA5401D0004FBDF /* Animator.h */,
-				A7B2DEC51CA5401D0004FBDF /* Animator.m */,
+				A71C6DE61CA8EC2400CF6DFC /* Animator */,
 				A76ADD6C1CA53582000BC2D7 /* Models */,
 				A76ADD681CA53433000BC2D7 /* Cells */,
 				A76ADD601CA52EB2000BC2D7 /* ViewControllers */,
