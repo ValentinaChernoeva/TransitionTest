@@ -28,8 +28,8 @@
  configureCellBlock:(TableViewCellConfigureBlock)configureCellBlock {
     self = [super init];
     if (self) {
-        self.items = items;
-        self.cellIdentifier = cellIdentifier;
+        self.items = [items copy];
+        self.cellIdentifier = [cellIdentifier copy];
         self.configureCellBlock = [configureCellBlock copy];
     }
     return self;
