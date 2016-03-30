@@ -7,9 +7,6 @@
 //
 
 #import "Animator.h"
-#import "UsersViewController.h"
-#import "ProfileViewController.h"
-#import "UserInfoViewCell.h"
 
 @implementation Animator
 

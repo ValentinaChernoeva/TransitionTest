@@ -24,7 +24,7 @@
     if (operation == UINavigationControllerOperationPush) {
         animator.fromView = ((UsersViewController *)fromVC).selectedCell;
         animator.toView = ((ProfileViewController *)toVC).headerView;
-    } else if ([fromVC isKindOfClass:[ProfileViewController class]]) {
+    } else if ([fromVC isKindOfClass:[UsersViewController class]]) {
         return nil;
     } else {
         animator.fromView = ((ProfileViewController *)fromVC).headerView;
