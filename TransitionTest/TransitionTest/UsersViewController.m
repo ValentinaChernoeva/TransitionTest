@@ -7,19 +7,19 @@
 //
 
 #import "UsersViewController.h"
-#import "Animator.h"
 #import "ArrayDataSource.h"
+#import "NavigationDelegate.h"
+#import "ProfileViewController.h"
 #import "UIView+Addition.h"
 #import "UIViewController+Storyboard.h"
 #import "User.h"
 #import "UserInfoViewCell.h"
-#import "ProfileViewController.h"
 
-@interface UsersViewController () <UINavigationControllerDelegate>
+@interface UsersViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) ArrayDataSource *usersArrayDataSource;
-@property (strong, nonatomic) Animator *animator;
+@property (strong, nonatomic) NavigationDelegate *navigationDelegate;
 
 @end
 
@@ -27,12 +27,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationDelegate = [[NavigationDelegate alloc] init];
     [self setupTableView];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    self.navigationController.delegate = self;
+    self.navigationController.delegate = self.navigationDelegate;
 }
 
 - (void)setupTableView {
@@ -70,20 +71,4 @@
 
 }
 
-#pragma mark - UINavigationControllerDelegate
-
-- (nullable id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
-                                            animationControllerForOperation:(UINavigationControllerOperation)operation
-                                                         fromViewController:(UIViewController *)fromVC
-                                                           toViewController:(UIViewController *)toVC {
-    Animator *animator = [[Animator alloc] init];
-    if (operation == UINavigationControllerOperationPush) {
-        animator.transitioningType = TransitioningFromUserToProfile;
-    } else if ([fromVC isKindOfClass:[self class]]){
-        return nil;
-    } else {
-        animator.transitioningType = TransitioningFromProfileToUser;
-    }
-    return animator;
-}
 @end

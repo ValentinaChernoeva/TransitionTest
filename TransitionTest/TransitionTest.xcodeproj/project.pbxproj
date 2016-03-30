@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A71C6DEC1CA8F08F00CF6DFC /* UIViewController+Storyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = A71C6DEB1CA8F08F00CF6DFC /* UIViewController+Storyboard.m */; };
+		A71C6E3D1CAB894400CF6DFC /* NavigationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A71C6E3C1CAB894400CF6DFC /* NavigationDelegate.m */; };
 		A76ADD5F1CA52EAD000BC2D7 /* UsersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A76ADD5E1CA52EAD000BC2D7 /* UsersViewController.m */; };
 		A76ADD631CA53018000BC2D7 /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A76ADD621CA53018000BC2D7 /* ArrayDataSource.m */; };
 		A76ADD671CA5342E000BC2D7 /* UserInfoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A76ADD661CA5342E000BC2D7 /* UserInfoViewCell.m */; };
@@ -44,6 +45,8 @@
 /* Begin PBXFileReference section */
 		A71C6DEA1CA8F08F00CF6DFC /* UIViewController+Storyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Storyboard.h"; sourceTree = "<group>"; };
 		A71C6DEB1CA8F08F00CF6DFC /* UIViewController+Storyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Storyboard.m"; sourceTree = "<group>"; };
+		A71C6E3B1CAB894400CF6DFC /* NavigationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationDelegate.h; sourceTree = "<group>"; };
+		A71C6E3C1CAB894400CF6DFC /* NavigationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationDelegate.m; sourceTree = "<group>"; };
 		A76ADD5D1CA52EAD000BC2D7 /* UsersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsersViewController.h; sourceTree = "<group>"; };
 		A76ADD5E1CA52EAD000BC2D7 /* UsersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersViewController.m; sourceTree = "<group>"; };
 		A76ADD611CA53018000BC2D7 /* ArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayDataSource.h; sourceTree = "<group>"; };
@@ -105,6 +108,8 @@
 			children = (
 				A7B2DEC41CA5401D0004FBDF /* Animator.h */,
 				A7B2DEC51CA5401D0004FBDF /* Animator.m */,
+				A71C6E3B1CAB894400CF6DFC /* NavigationDelegate.h */,
+				A71C6E3C1CAB894400CF6DFC /* NavigationDelegate.m */,
 			);
 			name = Animator;
 			sourceTree = "<group>";
@@ -358,6 +363,7 @@
 				A76ADD5F1CA52EAD000BC2D7 /* UsersViewController.m in Sources */,
 				A71C6DEC1CA8F08F00CF6DFC /* UIViewController+Storyboard.m in Sources */,
 				A79567641CA52B8E00A79EE6 /* AppDelegate.m in Sources */,
+				A71C6E3D1CAB894400CF6DFC /* NavigationDelegate.m in Sources */,
 				A76ADD6B1CA5357F000BC2D7 /* User.m in Sources */,
 				A76ADD631CA53018000BC2D7 /* ArrayDataSource.m in Sources */,
 				A76ADD731CA5371A000BC2D7 /* UIView+Addition.m in Sources */,

@@ -16,6 +16,7 @@ typedef NS_ENUM(NSUInteger, TransitioningType) {
 
 @interface Animator : NSObject <UIViewControllerAnimatedTransitioning>
 
-@property (assign, nonatomic) TransitioningType transitioningType;
+@property (strong, nonatomic) UIView *fromView;
+@property (strong, nonatomic) UIView *toView;
 
 @end

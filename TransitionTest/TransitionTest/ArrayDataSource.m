@@ -11,7 +11,7 @@
 
 @interface ArrayDataSource ()
 
-@property (strong, nonatomic) NSArray *items;
+@property (copy, nonatomic) NSArray *items;
 @property (copy, nonatomic) NSString *cellIdentifier;
 @property (copy, nonatomic) TableViewCellConfigureBlock configureCellBlock;
 

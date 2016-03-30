@@ -19,22 +19,13 @@
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
 
-    UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     
     UIView *containerView = [transitionContext containerView];
     NSTimeInterval duration = [self transitionDuration:transitionContext];
     
-    UIView *fromView = nil;
-    UIView *toView = nil;
-
-    if (self.transitioningType == TransitioningFromUserToProfile) {
-        fromView = ((UsersViewController *)fromViewController).selectedCell;
-        toView = ((ProfileViewController *)toViewController).headerView;
-    } else {
-        fromView = ((ProfileViewController *)fromViewController).headerView;
-        toView = ((UsersViewController *)toViewController).selectedCell;
-    }
+    UIView *fromView = self.fromView;
+    UIView *toView = self.toView;
 
     UIView *snapshot = [fromView snapshotViewAfterScreenUpdates:NO];
     snapshot.frame = [containerView convertRect:fromView.frame fromView:fromView.superview];
