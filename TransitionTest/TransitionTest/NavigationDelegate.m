@@ -19,7 +19,7 @@
                                             animationControllerForOperation:(UINavigationControllerOperation)operation
                                                          fromViewController:(UIViewController *)fromVC
                                                            toViewController:(UIViewController *)toVC {
-    return [[Animator alloc] initWithOperation:operation];
+    return [[Animator alloc] init];
 }
 
 @end

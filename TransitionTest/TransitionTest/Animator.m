@@ -11,14 +11,6 @@
 
 @implementation Animator
 
-- (instancetype)initWithOperation:(UINavigationControllerOperation)operation {
-    self = [super init];
-    if (self) {
-        self.operation = operation;
-    }
-    return self;
-}
-
 #pragma mark - UIViewControllerAnimatedTransitioning
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
