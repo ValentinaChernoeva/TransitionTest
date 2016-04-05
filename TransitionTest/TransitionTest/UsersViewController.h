@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UsersViewController : UIViewController
+@interface UsersViewController : UIViewController 
 
-@property (strong, nonatomic) UITableViewCell *selectedCell;
+
 
 @end

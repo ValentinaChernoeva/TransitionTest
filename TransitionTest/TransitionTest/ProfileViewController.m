@@ -8,10 +8,12 @@
 
 #import "ProfileViewController.h"
 #import "Animator.h"
+#import "TransitionProtocol.h"
 #import "User.h"
 
-@interface ProfileViewController ()
+@interface ProfileViewController () <TransitionProtocol>
 
+@property (weak, nonatomic) IBOutlet UIView *headerView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *emailLabel;
 
@@ -27,6 +29,12 @@
 - (void)configurateView {
     self.nameLabel.text = self.user.name;
     self.emailLabel.text = self.user.email;
+}
+
+#pragma mark - TransitionProtocol
+
+- (UIView *)transitionView {
+    return self.headerView;
 }
 
 @end

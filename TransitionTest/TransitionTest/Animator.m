@@ -7,23 +7,31 @@
 //
 
 #import "Animator.h"
+#import "TransitionProtocol.h"
 
 @implementation Animator
 
-- (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext {
-    return 0.3;
+- (instancetype)initWithOperation:(UINavigationControllerOperation)operation {
+    self = [super init];
+    if (self) {
+        self.operation = operation;
+    }
+    return self;
 }
+
+#pragma mark - UIViewControllerAnimatedTransitioning
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
 
-    UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    UIViewController <TransitionProtocol> *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    UIViewController <TransitionProtocol> *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     
     UIView *containerView = [transitionContext containerView];
     NSTimeInterval duration = [self transitionDuration:transitionContext];
     
-    UIView *fromView = self.fromView;
-    UIView *toView = self.toView;
-
+    UIView *fromView = fromViewController.transitionView;
+    UIView *toView = toViewController.transitionView;
+ 
     UIView *snapshot = [fromView snapshotViewAfterScreenUpdates:NO];
     snapshot.frame = [containerView convertRect:fromView.frame fromView:fromView.superview];
     fromView.hidden = YES;
@@ -37,10 +45,10 @@
     
     [UIView animateWithDuration:duration animations:^{
         toViewController.view.alpha = 1.f;
-        CGRect frame = [containerView convertRect:toView.frame fromView:toView.superview];
-        CGRect newFrame = snapshot.frame;
-        newFrame.origin = frame.origin;
-        snapshot.frame = newFrame;
+        CGRect convertedRect = [containerView convertRect:toView.frame fromView:toView.superview];
+        CGFloat translationX = CGRectGetMinX(convertedRect) - CGRectGetMinX(snapshot.frame);
+        CGFloat translationY = CGRectGetMinY(convertedRect) - CGRectGetMinY(snapshot.frame);
+         snapshot.transform = CGAffineTransformMakeTranslation(translationX, translationY);
     } completion:^(BOOL finished) {
         toView.hidden = NO;
         fromView.hidden = NO;
@@ -49,6 +57,10 @@
         [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
     }];
 
+}
+
+- (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext {
+    return 0.3;
 }
 
 @end

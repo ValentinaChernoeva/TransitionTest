@@ -12,7 +12,6 @@
 
 @interface ProfileViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIView *headerView;
 @property (strong, nonatomic) User *user;
 
 @end

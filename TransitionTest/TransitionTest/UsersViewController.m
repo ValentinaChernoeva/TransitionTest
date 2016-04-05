@@ -9,17 +9,20 @@
 #import "UsersViewController.h"
 #import "ArrayDataSource.h"
 #import "NavigationDelegate.h"
+#import "TransitionProtocol.h"
 #import "ProfileViewController.h"
 #import "UIView+Addition.h"
 #import "UIViewController+Storyboard.h"
 #import "User.h"
 #import "UserInfoViewCell.h"
 
-@interface UsersViewController ()
+
+@interface UsersViewController () <TransitionProtocol>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) ArrayDataSource *usersArrayDataSource;
 @property (strong, nonatomic) NavigationDelegate *navigationDelegate;
+@property (assign, nonatomic) NSIndexPath *selectedIndexPath;
 
 @end
 
@@ -65,10 +68,15 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     ProfileViewController *profileVC = [ProfileViewController instantiateFromMainStoryboard];
     profileVC.user = [self.usersArrayDataSource itemAtIndexPath:indexPath];
-    self.selectedCell = [tableView cellForRowAtIndexPath:indexPath];
+    self.selectedIndexPath = indexPath;
 
     [self.navigationController pushViewController:profileVC animated:YES];
 
 }
 
+#pragma mark - TransitionProtocol
+
+- (UIView *)transitionView {
+    return [self.tableView cellForRowAtIndexPath:self.selectedIndexPath];
+}
 @end

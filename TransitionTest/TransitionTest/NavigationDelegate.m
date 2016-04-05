@@ -19,18 +19,7 @@
                                             animationControllerForOperation:(UINavigationControllerOperation)operation
                                                          fromViewController:(UIViewController *)fromVC
                                                            toViewController:(UIViewController *)toVC {
-    Animator *animator = [[Animator alloc] init];
-    
-    if (operation == UINavigationControllerOperationPush) {
-        animator.fromView = ((UsersViewController *)fromVC).selectedCell;
-        animator.toView = ((ProfileViewController *)toVC).headerView;
-    } else if ([fromVC isKindOfClass:[UsersViewController class]]) {
-        return nil;
-    } else {
-        animator.fromView = ((ProfileViewController *)fromVC).headerView;
-        animator.toView = ((UsersViewController *)toVC).selectedCell;
-    }
-    return animator;
+    return [[Animator alloc] initWithOperation:operation];
 }
 
 @end

@@ -9,14 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSUInteger, TransitioningType) {
-    TransitioningFromUserToProfile,
-    TransitioningFromProfileToUser
-};
-
 @interface Animator : NSObject <UIViewControllerAnimatedTransitioning>
 
-@property (strong, nonatomic) UIView *fromView;
-@property (strong, nonatomic) UIView *toView;
+@property (assign, nonatomic) UINavigationControllerOperation operation;
+
+- (instancetype)initWithOperation:(UINavigationControllerOperation)operation;
 
 @end
